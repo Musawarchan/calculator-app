@@ -21,7 +21,7 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           children: [
             _topIconsContainer(),
-            const DigitalDisplay().pOnly(top: 12, bottom: 12),
+            DigitalDisplay().pOnly(top: 12, bottom: 12),
             const Spacer(),
             const ButtonsContainer(),
           ],

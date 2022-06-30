@@ -4,9 +4,14 @@ import 'package:velocity_x/velocity_x.dart';
 
 import 'button.dart';
 
-class ButtonsContainer extends StatelessWidget {
+class ButtonsContainer extends StatefulWidget {
   const ButtonsContainer({Key? key}) : super(key: key);
 
+  @override
+  State<ButtonsContainer> createState() => _ButtonsContainerState();
+}
+
+class _ButtonsContainerState extends State<ButtonsContainer> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -24,19 +29,22 @@ class ButtonsContainer extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               MyCustomButton(
-                color: Colors.grey,
+                color: Theme.of(context).colorScheme.surface,
                 buttonText: 'AC',
                 onPressed: () {},
-              ),
+               ),
               MyCustomButton(
+                color: Theme.of(context).colorScheme.surface,
                 buttonText: '+/-',
                 onPressed: () {},
               ),
               MyCustomButton(
+                color: Theme.of(context).colorScheme.surface,
                 buttonText: '%',
                 onPressed: () {},
               ),
               MyCustomButton(
+                color: Theme.of(context).colorScheme.secondary,
                 buttonText: '÷',
                 onPressed: () {},
               ),
@@ -58,6 +66,7 @@ class ButtonsContainer extends StatelessWidget {
                 onPressed: () {},
               ),
               MyCustomButton(
+                color: Theme.of(context).colorScheme.secondary,
                 buttonText: '×',
                 onPressed: () {},
               ),
@@ -79,6 +88,7 @@ class ButtonsContainer extends StatelessWidget {
                 onPressed: () {},
               ),
               MyCustomButton(
+                color: Theme.of(context).colorScheme.secondary,
                 buttonText: '-',
                 onPressed: () {},
               ),
@@ -100,6 +110,7 @@ class ButtonsContainer extends StatelessWidget {
                 onPressed: () {},
               ),
               MyCustomButton(
+                color: Theme.of(context).colorScheme.secondary,
                 buttonText: '+',
                 onPressed: () {},
               ),
@@ -121,6 +132,7 @@ class ButtonsContainer extends StatelessWidget {
                 onPressed: () {},
               ),
               MyCustomButton(
+                color: Theme.of(context).colorScheme.secondary,
                 buttonText: '=',
                 onPressed: () {},
               ),
