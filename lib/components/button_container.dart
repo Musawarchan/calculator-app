@@ -17,9 +17,9 @@ class _DisplayWithButtonsContainerState
     extends State<DisplayWithButtonsContainer> {
   String displayValue = '0';
   String actualExpression = '0';
-  // creating an instance of parser for parsing (translating) the expression
+
   Parser p = Parser();
-  // using `late` keyword to express the late initialization of value
+
   late Expression parsedExpression;
 
   void _updateExpressionByAddingValue(String value, {String? valueToShow}) {
