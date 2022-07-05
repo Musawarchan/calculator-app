@@ -15,7 +15,7 @@ class MyCustomButton extends StatelessWidget {
       width: 75,
       height: 75,
       child: MaterialButton(
-        elevation: 0,
+        elevation: 1,
         padding: EdgeInsets.zero,
         color: color,
         shape: RoundedRectangleBorder(
