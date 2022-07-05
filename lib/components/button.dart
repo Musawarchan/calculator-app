@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class MyCustomButton extends StatelessWidget {
-  MyCustomButton(
+ 
+  const MyCustomButton(
       {required this.buttonText,
       this.color = const Color(0xFF333333),
       this.onPressed});
@@ -20,7 +21,7 @@ class MyCustomButton extends StatelessWidget {
         padding: EdgeInsets.zero,
         color: color,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(24),
+          borderRadius: BorderRadius.circular(50),
         ),
         onPressed: onPressed,
         child: Center(
