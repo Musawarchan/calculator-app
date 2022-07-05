@@ -5,6 +5,7 @@ class MyCustomButton extends StatelessWidget {
       {required this.buttonText,
       this.color = const Color(0xFF333333),
       this.onPressed});
+
   final String buttonText;
   final Color color;
   final Function()? onPressed;
@@ -15,17 +16,17 @@ class MyCustomButton extends StatelessWidget {
       width: 75,
       height: 75,
       child: MaterialButton(
-        elevation: 1,
+        elevation: 0,
         padding: EdgeInsets.zero,
         color: color,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(100),
+          borderRadius: BorderRadius.circular(24),
         ),
         onPressed: onPressed,
         child: Center(
             child: Text(
           buttonText,
-          style: const TextStyle(color: Colors.white, fontSize: 30),
+          style: const TextStyle(color: Colors.white, fontSize: 24),
         )),
       ),
     );

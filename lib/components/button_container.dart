@@ -16,7 +16,7 @@ class _DisplayWithButtonsContainerState
     extends State<DisplayWithButtonsContainer> {
   String displayValue = '0';
   String actualExpression = '0';
- 
+
   Parser p = Parser();
 
   late Expression parsedExpression;
@@ -69,6 +69,7 @@ class _DisplayWithButtonsContainerState
                     buttonText: 'AC',
                     onPressed: () {
                       setState(() {
+                        actualExpression = '';
                         displayValue = '';
                       });
                     },
@@ -186,6 +187,16 @@ class _DisplayWithButtonsContainerState
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   MyCustomButton(
+                      buttonText: '⌫',
+                      onPressed: () {
+                        setState(() {
+                          displayValue = displayValue.substring(
+                              0, displayValue.length - 1);
+                          actualExpression = actualExpression.substring(
+                              0, actualExpression.length - 1);
+                        });
+                      }),
+                  MyCustomButton(
                     buttonText: '0',
                     onPressed: () {
                       _updateExpressionByAddingValue('0');
@@ -198,12 +209,6 @@ class _DisplayWithButtonsContainerState
                     },
                   ),
                   MyCustomButton(
-                    buttonText: '00',
-                    onPressed: () {
-                      _updateExpressionByAddingValue('00');
-                    },
-                  ),
-                  MyCustomButton(
                     color: Theme.of(context).colorScheme.secondary,
                     buttonText: '=',
                     onPressed: () {
@@ -212,7 +217,7 @@ class _DisplayWithButtonsContainerState
                   ),
                 ],
               ),
-              32.heightBox,
+              8.heightBox,
             ]),
           ),
         ),
